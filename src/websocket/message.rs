@@ -41,9 +41,10 @@ pub struct CancelAllAfterMessage {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct InfoMessage {
     pub info: String,
-    pub version: DateTime<Utc>,
+    pub version: String,
     pub timestamp: DateTime<Utc>,
     pub docs: String,
+    pub heartbeat_enabled: Option<bool>,
     pub limit: Limit,
 }
 
